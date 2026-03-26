@@ -213,7 +213,7 @@ src="https://www.facebook.com/tr?id=1509232734338498&ev=PageView&noscript=1"
         </p>
         <img src="https://i.imgur.com/df8qKU2.png" alt="Casal usando WhatsApp com calma" class="hero-img">
         <a href="https://pay.hotmart.com/N104926673T?bid=1773648578506" class="btn">
-    QUERO AS 400 RESPOSTAS AGORA (<span id="price-main">$ 5.59</span>)
+    QUERO AS 400 RESPOSTAS AGORA (<span id="price-main">$ 5.17</span>)
 </a>
     </header>
 
@@ -324,7 +324,7 @@ src="https://www.facebook.com/tr?id=1509232734338498&ev=PageView&noscript=1"
 
 <!-- CTA sutil no final da seção -->
 <p style="font-size: 20px; font-weight: 600; color: #4A7043; margin-bottom: 20px;">
-    Tudo isso por apenas <span id="price-main">$ 5.59</span> — menos que um jantar.
+    Tudo isso por apenas <span id="price-main">$ 5.17</span> — menos que um jantar.
 </p>
     <a href="https://pay.hotmart.com/N104926673T?bid=1773648578506" class="btn" style="font-size: 20px; padding: 18px 50px;">
         Quero Receber Tudo Agora
@@ -566,7 +566,7 @@ src="https://www.facebook.com/tr?id=1509232734338498&ev=PageView&noscript=1"
     <!-- CTA FINAL -->
     <div style="text-align: center; margin: 60px 0;">
         <a href="https://pay.hotmart.com/N104926673T?bid=1773648578506" class="btn">
-    QUERO DOMINAR MINHAS CONVERSAS AGORA – <span id="price-main">$ 5.59</span>
+    QUERO DOMINAR MINHAS CONVERSAS AGORA – <span id="price-main">$ 5.17</span>
 </a>
         <p style="margin-top: 15px; font-size: 18px;">Acesso imediato + garantia de 7 dias</p>
     </div>
@@ -649,15 +649,15 @@ fetch("https://ipapi.co/json/")
 
     if (data.country === "MZ") {
       // Moçambique: valor atrativo arredondado (\~$5.59 USD ≈ 357 MZN)
-      displayPrice = "357 MZN";
+      displayPrice = "330 MZN";
     } 
     else if (data.country === "BR") {
       // Brasil: valor padrão de e-commerce
-      displayPrice = "R$ 29,90";
+      displayPrice = "R$ 27";
     } 
     else {
       // Default para outros países (inclui EUA, Europa, etc.)
-      displayPrice = "$5.59";
+      displayPrice = "$5.17";
     }
 
     // Atualiza todos os spans com o preço correspondente
@@ -669,7 +669,7 @@ fetch("https://ipapi.co/json/")
     console.log("Não foi possível detectar o país → usando preço em dólar como fallback.");
     
     // Fallback seguro
-    const fallbackPrice = "$5.59";
+    const fallbackPrice = "$5.17";
     document.querySelectorAll("#price-main").forEach(el => {
       el.innerText = fallbackPrice;
     });
