@@ -661,6 +661,194 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
   }
   .kb-send svg{width:8px;height:8px;}
 
+  /* ---------- TIKTOK POST REPLICADO (carrossel real, arrastável) ---------- */
+  .tt-post{
+    margin-top:28px;
+    max-width:340px;
+    margin-left:auto;
+    margin-right:auto;
+    background:var(--dark);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .tt-post__topbar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 12px;
+    background:var(--paper);
+  }
+  .tt-post__back{color:var(--ink-soft);font-size:16px;}
+  .tt-post__search{
+    flex:1;
+    font-size:11.5px;
+    color:var(--ink-faint);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:100px;
+    padding:6px 12px;
+  }
+  .tt-post__stage{
+    position:relative;
+    height:340px;
+    background:var(--paper);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .tt-post__counter{
+    position:absolute;
+    top:10px;
+    right:12px;
+    font-size:10.5px;
+    color:var(--ink-faint);
+    background:rgba(255,255,255,0.7);
+    border-radius:100px;
+    padding:2px 8px;
+    z-index:3;
+  }
+  .tt-post__slide-wrap{
+    display:flex;
+    width:100%;
+    height:100%;
+    transition:transform .35s ease;
+  }
+  .tt-post__slide{
+    flex:0 0 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    padding:28px 26px;
+    font-family:'Fraunces',serif;
+    font-size:19px;
+    line-height:1.45;
+    color:var(--ink);
+    text-align:left;
+  }
+  .tt-post__slide mark{background:#F5D97A;color:var(--ink);padding:0 3px;border-radius:2px;}
+  .tt-post__slide--offer{gap:14px;}
+  .tt-post__offer-cta{font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:16px;color:var(--rust);}
+  .tt-post__handle{
+    position:absolute;
+    top:14px;
+    left:14px;
+    font-size:12px;
+    color:var(--ink-faint);
+    z-index:3;
+  }
+  .tt-post__sign{
+    position:absolute;
+    bottom:14px;
+    right:16px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--sage);
+    font-size:14px;
+    z-index:3;
+  }
+  .tt-post__bubble{
+    position:absolute;
+    top:52px;
+    left:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(228,220,204,0.9);
+    border-radius:100px;
+    padding:6px 12px 6px 6px;
+    z-index:3;
+    max-width:78%;
+  }
+  .tt-post__bubble-avatar{
+    width:24px;height:24px;flex-shrink:0;border-radius:50%;
+    background:var(--rust-tint);color:var(--rust-deep);
+    font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  }
+  .tt-post__bubble-text{font-size:11px;line-height:1.3;color:var(--ink-soft);}
+  .tt-post__bubble-text strong{color:var(--ink);}
+  .tt-post__avatars{
+    position:absolute;
+    bottom:38px;
+    right:14px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    z-index:3;
+  }
+  .tt-post__avatar{
+    width:28px;height:28px;border-radius:50%;
+    background:var(--sage-tint);color:var(--sage);
+    font-size:11px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+    border:2px solid var(--paper);
+  }
+  .tt-post__avatar--angela{background:var(--rust-tint);color:var(--rust-deep);}
+  .tt-post__nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.6);
+    border:none;
+    width:26px;height:26px;
+    border-radius:50%;
+    font-size:16px;
+    color:var(--ink-soft);
+    cursor:pointer;
+    z-index:4;
+    line-height:1;
+  }
+  .tt-post__nav--prev{left:6px;}
+  .tt-post__nav--next{right:6px;}
+  .tt-post__dots{
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:5px;
+    z-index:4;
+  }
+  .tt-post__dot{width:5px;height:5px;border-radius:50%;background:var(--line);cursor:pointer;}
+  .tt-post__dot.active{background:var(--rust);}
+  .tt-post__caption{padding:14px 16px 16px;}
+  .tt-post__author{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;}
+  .tt-post__author-name{font-weight:700;font-size:13px;color:#F2EDE5;}
+  .tt-post__date{font-size:11px;color:#9C9385;}
+  .tt-post__caption-text{font-size:12.5px;line-height:1.5;color:#D8D2C6;margin-bottom:10px;}
+  .tt-post__tags{color:#9C9385;}
+  .tt-post__meta{display:flex;gap:14px;font-size:11.5px;color:#9C9385;}
+  .tt-post__views{margin-left:auto;}
+
+  .proof-quality{margin-top:44px;}
+  .proof-quality__label{
+    text-align:center;
+    font-family:'Fraunces',serif;
+    font-size:19px;
+    color:var(--ink);
+    margin-bottom:22px;
+  }
+  .proof-examples{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    max-width:560px;
+    margin:0 auto;
+  }
+  .proof-example{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px;
+    text-align:left;
+  }
+  .proof-example__tag{font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;font-weight:600;}
+  .proof-example__sit{font-size:14px;font-style:italic;color:var(--ink-soft);margin-bottom:10px;line-height:1.45;}
+  .proof-example__resp{font-size:14.5px;font-weight:700;color:var(--ink);background:var(--sage-tint);border-radius:8px;padding:9px 11px;line-height:1.4;}
+  @media (max-width:640px){.proof-examples{grid-template-columns:1fr;}}
+
   /* ---------- REEL COMMENT CARDS (prova social real) ---------- */
   .reel-comments{
     margin-top:32px;
@@ -693,10 +881,21 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
     border:1.5px solid var(--line);
     flex-shrink:0;
     overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink-soft);
   }
   .reel-avatar--angela{
     border-color:var(--sage);
+    background:var(--sage-tint);
+    color:var(--sage);
   }
+  .reel-comments .reel-card:nth-child(3n+1) .reel-avatar:not(.reel-avatar--angela){background:var(--rust-tint);color:var(--rust-deep);}
+  .reel-comments .reel-card:nth-child(3n+2) .reel-avatar:not(.reel-avatar--angela){background:var(--sage-tint);color:var(--sage);}
+  .reel-comments .reel-card:nth-child(3n+3) .reel-avatar:not(.reel-avatar--angela){background:#F0E6D2;color:var(--gold);}
   .reel-avatar img{width:100%;height:100%;object-fit:cover;}
   .reel-meta{flex:1;min-width:0;}
   .reel-name{font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -999,7 +1198,7 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
     </div>
     <div class="future-close">Essa pessoa já existe em você. <strong>Ela só estava sem as palavras.</strong></div>
     <div class="cta-block" style="text-align:center;margin-top:36px;">
-      <a class="btn" href="https://pay.hotmart.com/N104926673T?bid=1773648578506">
+      <a class="btn" href="https://pay.hotmart.com/G107378774N?off=lvt8bpq0">
         Quero ser essa pessoa <span class="price">R$ 67</span>
       </a>
     </div>
@@ -1257,7 +1456,7 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
       <div class="price-final">
         <div class="label">seu investimento hoje</div>
         <div class="price">R$ 67 <span>/ pagamento único</span></div>
-        <a class="btn" href="https://pay.hotmart.com/N104926673T?bid=1773648578506">Quero as 400 respostas agora</a>
+        <a class="btn" href="https://pay.hotmart.com/G107378774N?off=lvt8bpq0">Quero as 400 respostas agora</a>
       </div>
     </div>
   </div>
@@ -1301,102 +1500,171 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
 <!-- ============ PROVA / COMUNIDADE ============ -->
 <section>
   <div class="wrap">
-    <div class="eyebrow">quem já usa</div>
-    <h2>O que as pessoas dizem nos Reels</h2>
-    <p class="lede">Esses são comentários reais de quem viu o conteúdo e pediu o método antes mesmo de existir uma página de vendas.</p>
+    <div class="eyebrow">você não está sozinha nisso</div>
+    <h2>Outras pessoas sentiram esse mesmo aperto no peito.</h2>
+    <p class="lede">Este é um dos carrosséis reais da Angela no TikTok. Arraste para ver:</p>
 
-    <!-- Cards de comentários reais extraídos dos prints dos Reels @angela_morales -->
+    <!-- CARROSSEL REAL replicado: conteúdo extraído fielmente dos prints @angela_morales no TikTok -->
+    <div class="tt-post" id="tt-post">
+      <div class="tt-post__topbar">
+        <span class="tt-post__back">&#8592;</span>
+        <span class="tt-post__search">&#128269; Encontrar conteúdo...</span>
+      </div>
+
+      <div class="tt-post__stage">
+        <div class="tt-post__counter" id="tt-counter">1/5</div>
+
+        <div class="tt-post__slide-wrap" id="tt-slide-wrap">
+          <div class="tt-post__slide">A toxicidade não te destrói com palavras.<br>Ela te destrói quando <mark>você reage.</mark></div>
+          <div class="tt-post__slide">A primeira estratégia<br>não é responder melhor.<br><mark>É aprender a não reagir.</mark></div>
+          <div class="tt-post__slide"><mark>Proteja sua energia</mark><br>antes de proteger sua imagem.</div>
+          <div class="tt-post__slide">Respostas elegantes não atacam.<br>Elas definem limites.<br><mark>E preservam sua paz.</mark></div>
+          <div class="tt-post__slide tt-post__slide--offer">
+            <span class="tt-post__offer-text"><mark>Obtenha 400</mark> respostas estratégicas para lidar com pessoas tóxicas sem perder sua serenidade.</span>
+            <span class="tt-post__offer-cta">Comenta "QUERO" que eu te envio.</span>
+          </div>
+        </div>
+
+        <div class="tt-post__handle">@angela_morales</div>
+
+        <div class="tt-post__bubble" id="tt-bubble">
+          <span class="tt-post__bubble-avatar">AH</span>
+          <span class="tt-post__bubble-text"><strong>albertinahenriqu9</strong><br>eu quero</span>
+        </div>
+
+        <div class="tt-post__avatars">
+          <span class="tt-post__avatar">D</span>
+          <span class="tt-post__avatar">N</span>
+          <span class="tt-post__avatar tt-post__avatar--angela">A</span>
+        </div>
+
+        <div class="tt-post__sign">xo Angel</div>
+
+        <button class="tt-post__nav tt-post__nav--prev" onclick="ttMove(-1)" aria-label="Slide anterior">&#8249;</button>
+        <button class="tt-post__nav tt-post__nav--next" onclick="ttMove(1)" aria-label="Próximo slide">&#8250;</button>
+
+        <div class="tt-post__dots" id="tt-dots">
+          <span class="tt-post__dot active" onclick="ttGo(0)"></span>
+          <span class="tt-post__dot" onclick="ttGo(1)"></span>
+          <span class="tt-post__dot" onclick="ttGo(2)"></span>
+          <span class="tt-post__dot" onclick="ttGo(3)"></span>
+          <span class="tt-post__dot" onclick="ttGo(4)"></span>
+        </div>
+      </div>
+
+      <div class="tt-post__caption">
+        <div class="tt-post__author">
+          <span class="tt-post__author-name">Alexandra Gonçalo</span>
+          <span class="tt-post__date">04-13</span>
+        </div>
+        <p class="tt-post__caption-text">Não é o que dizem que te afeta… é o quanto você reage. Pessoas tóxicas não precisam de muito. Só precisam de uma reação sua. Controle isso, e você muda o jogo. <span class="tt-post__tags">#pessoastoxicas #inteligencia...</span></p>
+        <div class="tt-post__meta">
+          <span>&#128172; 2</span>
+          <span>&#128278; 1</span>
+          <span class="tt-post__views">423 visualizações</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="lede" style="margin-top:32px;">E não foi só nesse. Em vários carrosséis, o comentário era sempre parecido:</p>
+
+    <!-- Cards de comentários reais extraídos dos prints dos carrosséis @angela_morales no TikTok -->
     <div class="reel-comments">
 
       <div class="reel-card">
         <div class="reel-header">
           <div class="reel-avatar">
-            <!-- IMG: foto de perfil Alexandra Gonçalo, 60x60px -->
+            A
           </div>
           <div class="reel-meta">
-            <div class="reel-name">Alexandra Gonçalo</div>
-            <div class="reel-source">comentário no Reel @angela_morales</div>
+            <div class="reel-name">albertinahenriqu9</div>
           </div>
           <div class="reel-ig">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </div>
         </div>
-        <div class="reel-trigger">"A toxicidade não te destrói com palavras. Ela te destrói quando <strong>você reage</strong>."</div>
-        <div class="reel-comment">"Ja foi no direct ❤️"</div>
+        <div class="reel-comment">"eu quero"</div>
       </div>
 
       <div class="reel-card">
         <div class="reel-header">
           <div class="reel-avatar">
-            <!-- IMG: foto de perfil Tisha, 60x60px -->
-          </div>
-          <div class="reel-meta">
-            <div class="reel-name">Tisha</div>
-            <div class="reel-source">comentário no Reel @angela_morales</div>
-          </div>
-          <div class="reel-ig">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </div>
-        </div>
-        <div class="reel-trigger">"Você lê a mensagem... sente um aperto no peito... e fica sem <strong>saber o que responder</strong>?"</div>
-        <div class="reel-comment">"Quero ❤️"</div>
-      </div>
-
-      <div class="reel-card">
-        <div class="reel-header">
-          <div class="reel-avatar">
-            <!-- IMG: foto de perfil Natalia, 60x60px -->
-          </div>
-          <div class="reel-meta">
-            <div class="reel-name">natalia</div>
-            <div class="reel-source">comentário no Reel @angela_morales</div>
-          </div>
-          <div class="reel-ig">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </div>
-        </div>
-        <div class="reel-trigger">"Você já sentiu que a tua própria <strong>família te esgota</strong> emocionalmente?"</div>
-        <div class="reel-comment">"eu quero 🔥"</div>
-      </div>
-
-      <div class="reel-card">
-        <div class="reel-header">
-          <div class="reel-avatar">
-            <!-- IMG: foto de perfil Nicolinhas M, 60x60px -->
-          </div>
-          <div class="reel-meta">
-            <div class="reel-name">Nicolinhas M</div>
-            <div class="reel-source">comentário no Reel @angela_morales</div>
-          </div>
-          <div class="reel-ig">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </div>
-        </div>
-        <div class="reel-trigger">"Quando uma pessoa tóxica te provoca, o que você <strong>sente primeiro</strong>?"</div>
-        <div class="reel-comment">"Quero"</div>
-      </div>
-
-      <div class="reel-card">
-        <div class="reel-header">
-          <div class="reel-avatar">
-            <!-- IMG: foto de perfil daeb, 60x60px -->
+            D
           </div>
           <div class="reel-meta">
             <div class="reel-name">daeb</div>
-            <div class="reel-source">comentário no Reel @angela_morales</div>
           </div>
           <div class="reel-ig">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </div>
         </div>
-        <div class="reel-trigger">"Quando uma pessoa tóxica te provoca, o que você <strong>sente primeiro</strong>?"</div>
         <div class="reel-comment">"Quero"</div>
+      </div>
+
+      <div class="reel-card">
+        <div class="reel-header">
+          <div class="reel-avatar">
+            N
+          </div>
+          <div class="reel-meta">
+            <div class="reel-name">natalia</div>
+          </div>
+          <div class="reel-ig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+        </div>
+        <div class="reel-comment">"eu quero"</div>
+      </div>
+
+      <div class="reel-card">
+        <div class="reel-header">
+          <div class="reel-avatar">
+            N
+          </div>
+          <div class="reel-meta">
+            <div class="reel-name">Nicolinhas M</div>
+          </div>
+          <div class="reel-ig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+        </div>
+        <div class="reel-comment">"Quero"</div>
+      </div>
+
+      <div class="reel-card">
+        <div class="reel-header">
+          <div class="reel-avatar">
+            T
+          </div>
+          <div class="reel-meta">
+            <div class="reel-name">Tisha</div>
+          </div>
+          <div class="reel-ig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+        </div>
+        <div class="reel-comment">"Quero"</div>
+      </div>
+
+      <div class="reel-card">
+        <div class="reel-header">
+          <div class="reel-avatar">
+            I
+          </div>
+          <div class="reel-meta">
+            <div class="reel-name">Igor Pereira</div>
+          </div>
+          <div class="reel-ig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+        </div>
+        <div class="reel-comment">"quero aliás, preciso!"</div>
       </div>
 
       <div class="reel-card reel-card--angela">
         <div class="reel-header">
           <div class="reel-avatar reel-avatar--angela">
-            <!-- IMG: foto de perfil Angela Morales, 60x60px -->
+            A
           </div>
           <div class="reel-meta">
             <div class="reel-name">Alexandra Gonçalo</div>
@@ -1406,18 +1674,40 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </div>
         </div>
-        <div class="reel-trigger">Resposta de @angela_morales</div>
         <div class="reel-comment">"ja mandei mensagem 🔥❤️"</div>
       </div>
 
     </div>
 
+    <p class="lede" style="margin-top:28px;">Elas não queriam só responder. Queriam as 400 respostas prontas para nunca mais travar.</p>
+
+    <!-- PROVA DE QUALIDADE: exemplos reais do produto (mesmo conteúdo do preview animado, em formato estático) -->
+    <div class="proof-quality">
+      <p class="proof-quality__label">E é exatamente isso que elas recebem:</p>
+      <div class="proof-examples">
+        <div class="proof-example">
+          <div class="proof-example__tag">chantagem emocional</div>
+          <div class="proof-example__sit">"Depois de tudo que eu fiz por você."</div>
+          <div class="proof-example__resp">"Eu reconheço o que você fez por mim. Isso não muda o que estou te dizendo agora."</div>
+        </div>
+        <div class="proof-example">
+          <div class="proof-example__tag">indiretas</div>
+          <div class="proof-example__sit">"Não sou eu que vou falar nada não."</div>
+          <div class="proof-example__resp">"Você acabou de falar."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO (Sr. Wilson): inserir aqui depoimentos reais de compradoras assim que disponíveis
+         (print de WhatsApp, comentário na Hotmart, etc). Isso é o que mais vai aumentar a
+         probabilidade percebida de sucesso — mais até do que os exemplos acima. -->
+
     <div class="reel-footnote">
-      Comentários reais dos Reels <strong>@angela_morales</strong> no Instagram · As pessoas pediram antes mesmo de existir uma página.
+      Comentários reais de pessoas que se reconheceram nos carrosséis <strong>@angela_morales</strong> no TikTok.
     </div>
 
     <div class="cta-soft" style="margin-top:32px;">
-      <a href="https://pay.hotmart.com/N104926673T?bid=1773648578506">
+      <a href="https://pay.hotmart.com/G107378774N?off=lvt8bpq0">
         Quero o Não Reaja agora
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
@@ -1457,7 +1747,7 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="eyebrow">última chamada</div>
     <h2>A próxima mensagem que te aperta o peito pode chegar hoje. Esteja pronta.</h2>
-    <a class="btn" href="https://pay.hotmart.com/N104926673T?bid=1773648578506">
+    <a class="btn" href="https://pay.hotmart.com/G107378774N?off=lvt8bpq0">
       Quero as 400 respostas <span class="price">R$ 67</span>
     </a>
     <div class="micro-trust">
@@ -1478,6 +1768,47 @@ src="https://www.facebook.com/tr?id=1283099927110755&ev=PageView&noscript=1"
 
 
 <div class="pv-toast" id="pv-toast">✓ Copiado!</div>
+<script>
+// ── CARROSSEL TIKTOK REPLICADO (prova social) ──────────────────────────
+(function() {
+  const wrap = document.getElementById('tt-slide-wrap');
+  const counter = document.getElementById('tt-counter');
+  const dots = document.querySelectorAll('.tt-post__dot');
+  const bubble = document.getElementById('tt-bubble');
+  if (!wrap) return;
+  const total = wrap.children.length;
+  let idx = 0;
+
+  function render() {
+    wrap.style.transform = `translateX(-${idx * 100}%)`;
+    counter.textContent = `${idx + 1}/${total}`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    bubble.style.display = idx === 0 ? 'flex' : 'none';
+  }
+
+  window.ttMove = function(dir) {
+    idx = Math.max(0, Math.min(total - 1, idx + dir));
+    render();
+  };
+  window.ttGo = function(i) {
+    idx = i;
+    render();
+  };
+
+  // swipe touch support
+  let startX = null;
+  wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+  wrap.addEventListener('touchend', e => {
+    if (startX === null) return;
+    const diff = e.changedTouches[0].clientX - startX;
+    if (Math.abs(diff) > 40) window.ttMove(diff < 0 ? 1 : -1);
+    startX = null;
+  });
+
+  render();
+})();
+</script>
+
 <script>
 function pvFilter(btn, cat) {
   document.querySelectorAll('.preview-tab').forEach(b => b.classList.remove('active'));
